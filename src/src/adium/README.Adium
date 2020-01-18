@@ -1,0 +1,34 @@
+Compiling SIPE plugin for Adium
+===============================
+
+To compile the Adium plugin you will need XCode and the source code from
+the following URLs:
+
+* Adium 1.5+ code: http://trac.adium.im/wiki/GettingNewestAdiumSource
+* SIPE code:       http://sourceforge.net/projects/sipe/files/sipe/
+
+1. Get Adium
+-------------
+
+NOTE: you only have to do this step once. If you don't change the Adium
+      source code, then you can reuse the results from this step in future
+      SIPEAdiumPlugin builds.
+
+Follow the instructions at their URL above.
+
+The directory needs to be called "adium" and at the same level as SIPE source
+code directory.
+
+2. Build the SIPEAdiumPlugin Xcode project
+------------------------------------------
+
+In Xcode go to the Menu File -> Open..., browse to the locatio of your SIPE
+source tree, go into the src/adium directory, select SIPEAdiumPlugin.xcodeproj
+and press "Open".
+
+NOTE: please always make sure that the correct scheme has been selected by
+      selecting the menu Product -> Scheme -> SIPEAdiumPlugin. Otherwise you
+      will get cryptic build failures.
+
+Now you can just select Product -> Build and after a short while you should
+get a SIPEAdiumPlugin binary that you can install into your Adium application. 
